@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "ITC Avant Garde Gothic Pro";
+    src: local('ITC Avant Garde Gothic Pro'), local('ITC-Avant-Garde-Gothic-Pro'),
+     url("./../fonts/ITCAvantGardePro-Bk.otf")  format("opentype");
+}
+@font-face {
+    font-family: "ITC Avant Garde Gothic Pro";
+    src: local('ITC Avant Garde Gothic Pro Bold'), local('ITC-Avant-Garde-Gothic-Pro-Bold'),
+     url("./../fonts/ITCAvantGardePro-Bold.otf")  format("opentype");
+     font-weight: bold;
+}
+
+@font-face {
+    font-family: "Avenir";
+    src: local('Avenir'), url("./../fonts/Avenir.ttc");
+}
+
+* {
+    font-family: 'Avenir';
+}
+
+.section--container {
+    display: flex;
+    flex-direction: row;
+}
+
+.section--image {
+    width: 50%;
+}
+.section--image img{
+    width: 100%;
+    height: auto;
+
+}
+
+
+.section--content {
+    width: 50%;
+}
+.section--content-info {
+    /* padding-left: 120px;
+    padding-right: 120px; */
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+    max-width: 494px;
+}
+.section--content-info h4{
+    font-family: 'ITC Avant Garde Gothic Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31.25px;
+    line-height: 130%;
+}
