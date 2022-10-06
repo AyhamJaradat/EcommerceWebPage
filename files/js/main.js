@@ -1,17 +1,3 @@
-function initializePageEvents() {
-//   const nextButton = document.getElementById("nextBtn");
-//   nextButton.onclick = () => {
-//     console.log("Clciked")
-//     document.getElementById("horizontal-scrollable").scrollLeft += 20;
-//   };
-
-//   const previousButton = document.getElementById("previousBtn");
-//   previousButton.onclick = () => {
-//     console.log("Clciked")
-//     document.getElementById("horizontal-scrollable").scrollLeft -= 20;
-//   };
-
-}
 
 function scrollHorizontally( isRight){
     if(isRight){
