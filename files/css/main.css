@@ -23,6 +23,7 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   background-color: #acacac;
 }
@@ -55,15 +56,13 @@ section.featured-items {
   flex-direction: column;
   justify-content: center;
 
-  /* transform: translateY(-43%); */
-  
-
   margin-top: -192px;
   margin-bottom: 50px;
 }
 
 .section--content-info {
   width: 100%;
+
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -75,7 +74,6 @@ section.featured-items {
 
   font-size: 20px;
   color: #FFF;
-  /* color white here */
 }
 
 .section--content-info p {

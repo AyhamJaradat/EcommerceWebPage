@@ -1,87 +1,5 @@
 /* For Medium Size Devices */
 @media screen and (min-width: 640px) {
-
-    section.featured-items {
-        margin-top: 48px;
-      }
-      .section--container {
-        flex-direction: row;
-      }
-      .section--image {
-        width: 50%;
-      }
-      .section--content {
-        width: 50%;
-        margin-top: 32px;
-        margin-bottom: 32px;
-      }
-    
-      .section--content-info {
-        padding-left: 60px;
-        padding-right: 53px;
-      }
-      .section--content-info h4 {
-        font-size: 23px;
-        color: #000000;
-      }
-      .section--content-info p {
-        display: block;
-        font-size: 14px;
-        margin-top: 8px;
-      }
-      .section--content-info button {
-        margin-top: 16px;
-        color: #000000;
-        border-bottom: 1px solid black;
-      }
-      .section--content-products {
-        margin-top: 40px;
-        height: 310px;
-      }
-      .products-scollable {
-        padding-left: 60px;
-        padding-right: 0px;
-        width: 100%;
-      }
-      .section--content-products .scroll-btn {
-        display: flex;
-        top: 105px;
-      }
-      .section--content-products .products-next {
-        right: 24px;
-      }
-      .section--content-products .products-previous {
-        left: 24px;
-      }
-      .product-card {
-        width: 190px;
-        margin-right: 16px;
-      }
-      .product-card img {
-        width: 190px;
-        height: 240px;
-      }
-      .product-card .product-description {
-        margin-top: 12px;
-      }
-    
-      .product-details {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .product-colors {
-        margin-top: unset;
-      }
-      .product-colors .color {
-        margin-left: 8px;
-        margin-right: 0px;
-      }
-
-}
-
-/* For Desktop View */
-@media screen and (min-width: 1440px) {
   section.featured-items {
     margin-top: 48px;
   }
@@ -93,56 +11,54 @@
   }
   .section--content {
     width: 50%;
-    /* transform: translateY(0px); */
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 32px;
+    margin-bottom: 32px;
   }
 
   .section--content-info {
-    padding-left: 120px;
-    padding-right: 106px;
+    padding-left: 60px;
+    padding-right: 53px;
   }
   .section--content-info h4 {
-    font-size: 31.25px;
+    font-size: 23px;
     color: #000000;
   }
   .section--content-info p {
     display: block;
-    margin-top: 12px;
-    font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
+    margin-top: 8px;
   }
   .section--content-info button {
-    margin-top: 32px;
+    margin-top: 16px;
     color: #000000;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #000000;
   }
   .section--content-products {
-    margin-top: 68px;
-    height: 363px;
+    margin-top: 40px;
+    height: 310px;
   }
   .products-scollable {
-    padding-left: 120px;
+    padding-left: 60px;
     padding-right: 0px;
     width: 100%;
   }
   .section--content-products .scroll-btn {
     display: flex;
-    top: 135px;
+    top: 105px;
   }
   .section--content-products .products-next {
-    right: 48px;
+    right: 24px;
   }
   .section--content-products .products-previous {
-    left: 48px;
+    left: 24px;
   }
   .product-card {
-    width: 230px;
-    margin-right: 32px;
+    width: 190px;
+    margin-right: 16px;
   }
   .product-card img {
-    width: 230px;
-    height: 310px;
+    width: 190px;
+    height: 240px;
   }
   .product-card .product-description {
     margin-top: 12px;
@@ -161,48 +77,90 @@
     margin-right: 0px;
   }
 }
-/* @media screen and (min-width: 1024px) { */
-
-
-
-/* For Tablet View */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+/* For large Size Devices */
+@media screen and (min-width: 1024px) {
   .section--content-info {
+    padding-left: 100px;
+    padding-right: 86px;
+  }
+  .section--content-info h4 {
+    font-size: 25px;
+  }
+  .section--content-info p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  .section--content-info button {
+    margin-top: 32px;
+  }
+
+  .section--content-products {
+    margin-top: 54px;
+    height: 340px;
+  }
+  .products-scollable {
+    padding-left: 100px;
+  }
+  .section--content-products .scroll-btn {
+    top: 118px;
+  }
+  .section--content-products .products-next {
+    right: 32px;
+  }
+  .section--content-products .products-previous {
+    left: 32px;
+  }
+  .product-card {
+    width: 210px;
+    margin-right: 24px;
+  }
+  .product-card img {
+    width: 210px;
+    height: 280px;
   }
 }
 
-/* For Mobile Portrait View */
-@media screen and (max-device-width: 480px) and (orientation: portrait) {
-  .section--content-info {
+/* For Desktop View (xLarge) */
+@media screen and (min-width: 1240px) {
+  .section--content {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
-}
 
-/* For Mobile Landscape View */
-@media screen and (max-device-width: 640px) and (orientation: landscape) {
   .section--content-info {
+    padding-left: 120px;
+    padding-right: 106px;
   }
-}
-
-/* For Mobile Phones Portrait or Landscape View */
-@media screen and (max-device-width: 640px) {
-  .section--content-info {
+  .section--content-info h4 {
+    font-size: 31.25px;
   }
-}
 
-/* For iPhone 4 Portrait or Landscape View */
-@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-  .section--content-info {
+  .section--content-info p {
+    margin-top: 12px;
   }
-}
 
-/* For iPhone 5 Portrait or Landscape View */
-@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-  .section--content-info {
+  .section--content-products {
+    margin-top: 68px;
+    height: 363px;
   }
-}
-
-/* For iPhone 6 and 6 plus Portrait or Landscape View */
-@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
-  .section--content-info {
+  .products-scollable {
+    padding-left: 120px;
+  }
+  .section--content-products .scroll-btn {
+    top: 135px;
+  }
+  .section--content-products .products-next {
+    right: 48px;
+  }
+  .section--content-products .products-previous {
+    left: 48px;
+  }
+  .product-card {
+    width: 230px;
+    margin-right: 32px;
+  }
+  .product-card img {
+    width: 230px;
+    height: 310px;
   }
 }
