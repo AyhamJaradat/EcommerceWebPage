@@ -18,18 +18,31 @@
 
 * {
   font-family: "Avenir";
+  font-style: normal;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+body {
+  background-color: #acacac;
+}
+
+section.featured-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .section--container {
   display: flex;
-  flex-direction: row;
+  max-width: 1440px;
+  background-color: #fff;
+  flex-direction: column;
 }
 
 .section--image {
-  width: 50%;
+  width: 100%;
+  display: flex;
 }
 .section--image img {
   width: 100%;
@@ -37,182 +50,221 @@
 }
 
 .section--content {
-  width: 50%;
-}
-.section--content-info {
-  /* padding-left: 120px;*/
-  /* padding-right: 120px;  */
-  padding-left: 7.5rem;
-  padding-top: 6rem;
-  /* padding-right: 6.625rem; */
   width: 100%;
-  /* max-width: 494px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* transform: translateY(-43%); */
+  
+
+  margin-top: -192px;
+  margin-bottom: 50px;
 }
+
+.section--content-info {
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 .section--content-info h4 {
   font-family: "ITC Avant Garde Gothic Pro";
-  font-style: normal;
   font-weight: 700;
-  font-size: 31.25px;
-  color: #000000;
   line-height: 130%;
-  /* width: 494px; */
+
+  font-size: 20px;
+  color: #FFF;
+  /* color white here */
 }
 
 .section--content-info p {
-  margin-top: 0.75rem;
-  font-style: normal;
+  margin-top: 12px;
   font-weight: 400;
   font-size: 16px;
   color: #666666;
   line-height: 160%;
-  /* width: 432px; */
+  display: none;
 }
 
 .section--content-info button {
-  width: 146px;
   border: none;
-  border-bottom: 1px solid black;
-  margin-top: 2rem;
-  padding-bottom: 0.3125rem;
-  background-color: white;
-  font-style: normal;
+  padding-bottom: 5px;
+  background-color: transparent;
   font-weight: 900;
   font-size: 12.8px;
-  line-height: 17.48px;
+  line-height: 17px;
   text-transform: capitalize;
-  color: #000000;
+  cursor: pointer;
+
+  margin-top: 16px;
+  color: #FFF;
+  border-bottom: 1px solid #FFF;
 }
 
 .section--content-products {
-  margin-top: 4.25rem;
-  /* padding-left: 7.5rem;
-  margin-right: 2rem; */
-  /* overflow-x: scroll; */
-  height: 363px;
+  margin-top: 32px;
   position: relative;
-  /* overflow: hidden; */
+  height: 293px;
 }
 
 .products-scollable {
   display: flex;
   flex-direction: row;
-  height: 363px;
-  /* width: max-content; */
   overflow-x: scroll;
-  padding-left: 7.5rem;
+  overflow-y: hidden;
+
+  padding-left: 24px;
+  padding-right: 12px;
+  width: 100vw;
 }
-/* Hide scrollbar for Chrome, Safari and Opera */
+/* Hide scrollbar */
 .products-scollable::-webkit-scrollbar {
   display: none;
 }
-
 .products-scollable {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.section--content-products .scroll-btn {
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+
+  display: none;
+  top: 135px;
+}
+.section--content-products .products-next {
+  right: 48px;
+}
+.section--content-products .products-previous {
+  transform: rotate(180deg);
+  left: 48px;
 }
 
 .product-card {
-  height: 363px;
-  width: 230px;
-  margin-right: 2rem;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
+  height: 100%;
+
+  width: 148px;
+  margin-right: 12px;
 }
 
 .product-card img {
-  height: 310px;
-  width: 230px;
   user-select: none;
+  cursor: pointer;
+  width: 148px;
+  height: 200px;
 }
 
-.product-card > .product-description {
-  font-style: normal;
+.product-card .product-description {
   font-weight: 400;
   font-size: 12.8px;
   line-height: 160%;
-  margin-top: 12px;
-  height: 18px;
+  max-height: 60px;
+  overflow: hidden;
+
+  margin-top: 8px;
 }
 
 .product-details {
   display: flex;
-  justify-content: space-between;
   margin-top: 4px;
-  align-items: center;
-  height: 18px;
+  min-height: 20px;
+
+  flex-direction: column;
 }
 
-.product-details > .product-price {
-  font-style: normal;
-  font-weight: 500;
+.product-details .product-price {
+  font-weight: 600;
   font-size: 12.8px;
   line-height: 160%;
   height: 100%;
 }
 
-.product-color {
+.product-colors {
   display: flex;
   align-items: center;
-  height: 100%;
+
+  margin-top: 8px;
 }
 
-.color {
+.product-colors .color {
+  cursor: pointer;
   height: 12px;
   width: 12px;
   border-radius: 6px;
-  margin-left: 8px;
+  position: relative;
+
+  margin-left: 0px;
+  margin-right: 6px;
 }
 
-.blue {
+.product-colors .color input[type="radio"] {
+  display: none;
+}
+.product-colors .color label:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: -4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  border: 0px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.product-colors .color.blue label:before,
+.product-colors .color.blue label:after {
   background: #99c3cc;
-  border: 1px solid black;
-  padding: 1.5px;
-  background-clip: content-box;
 }
-
-.pink {
+.product-colors .color.pink label:before,
+.product-colors .color.pink label:after {
   background-color: #cc9999;
 }
-
-.purple {
+.product-colors .color.purple label:before,
+.product-colors .color.purple label:after {
   background-color: #cb99cc;
 }
-
-.green {
+.product-colors .color.green label:before,
+.product-colors .color.green label:after {
   background-color: #a6cc99;
 }
 
-.next {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 12px;
-  gap: 10px;
+.product-colors .color input[type="radio"]:checked + label:after {
+  border-radius: 6px;
+  width: 6px;
+  height: 6px;
   position: absolute;
-  width: 40px;
-  height: 40px;
-  right: 48px;
-  top: 135px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  vertical-align: middle;
+  top: 3px;
+  left: 3px;
+  content: " ";
+  display: block;
+  cursor: pointer;
 }
-.previous {
+.product-colors .color input[type="radio"]:checked + label:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background-color: #fff;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 12px;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 48px;
-  top: 135px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  vertical-align: middle;
-  transform: rotate(180deg);
 }
 .hidden {
-    display: none;
+  display: none !important;
 }

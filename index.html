@@ -4,14 +4,16 @@
     <meta charset="ISO-8859-1" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Ecommerce component</title>
     <link rel="icon" type="image/x-icon" href="files/img/favicon.png" />
     <script type="text/javascript" src="files/js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="files/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="files/css/responsive.css" />
   </head>
   <body onload="initializePageEvents()">
     <!--  Everyday items section-->
-    <section>
+    <section class="featured-items">
       <div class="section--container">
         <div class="section--image">
           <img src="files/img/bg.png" alt="Featured Image" />
@@ -25,34 +27,53 @@
             </p>
             <button>Shop all everyday items</button>
           </div>
-          <div class="section--content-products" >
-            <div class="previous hidden" id="previousBtn" onclick="scrollHorizontally(false)">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-chevron-right"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                  />
-                </svg>
-              </div>
-            <div class="products-scollable" id="horizontal-scrollable" onscroll="onHorizontalScroll()">
-             
+          <div class="section--content-products">
+            <div
+              class="scroll-btn products-previous hidden"
+              id="previousBtn"
+              onclick="scrollHorizontally(false)"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chevron-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </div>
+            <div
+              class="products-scollable"
+              id="horizontal-scrollable"
+              onscroll="onHorizontalScroll()"
+            >
               <div class="product-card">
                 <img src="files/img/product_image_1.png" alt="Product Image" />
                 <p class="product-description">365 Signature Hoodie</p>
                 <div class="product-details">
                   <p class="product-price">&#8364;33.95</p>
-                  <div class="product-color">
-                    <div class="blue color"></div>
-                    <div class="pink color"></div>
-                    <div class="purple color"></div>
-                    <div class="green color"></div>
+                  <div class="product-colors">
+                    <div class="blue color">
+                        <input type="radio" id="productId_color_0" name="product-1" value="blue">
+                        <label for="productId_color_0"></label>
+                    </div>
+                    <div class="pink color">
+                        <input type="radio" id="productId_color_1" name="product-1" value="pink">
+                        <label for="productId_color_1"></label>
+                    </div>
+                    <div class="purple color">
+                        <input type="radio" id="productId_color_2" name="product-1" value="purple">
+                        <label for="productId_color_2"></label>
+                    </div>
+                    <div class="green color">
+                        <input type="radio" id="productId_color_3" name="product-1" value="green">
+                        <label for="productId_color_3"></label>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -64,11 +85,27 @@
                 </p>
                 <div class="product-details">
                   <p class="product-price">&#8364;33.95</p>
-                  <div class="product-color">
-                    <div class="blue color"></div>
+                  <div class="product-colors">
+                    <!-- <div class="blue color"></div>
                     <div class="pink color"></div>
                     <div class="purple color"></div>
-                    <div class="green color"></div>
+                    <div class="green color"></div> -->
+                    <div class="blue color">
+                        <input type="radio" id="product_2_color_0" name="product-2" value="blue">
+                        <label for="product_2_color_0"></label>
+                    </div>
+                    <div class="pink color">
+                        <input type="radio" id="product_2_color_1" name="product-2" value="pink">
+                        <label for="product_2_color_1"></label>
+                    </div>
+                    <div class="purple color">
+                        <input type="radio" id="product_2_color_2" name="product-2" value="purple">
+                        <label for="product_2_color_2"></label>
+                    </div>
+                    <div class="green color">
+                        <input type="radio" id="product_2_color_3" name="product-2" value="green">
+                        <label for="product_2_color_3"></label>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -80,32 +117,50 @@
                 </p>
                 <div class="product-details">
                   <p class="product-price">&#8364;33.95</p>
-                  <div class="product-color">
-                    <div class="blue color"></div>
+                  <div class="product-colors">
+                    <!-- <div class="blue color"></div>
                     <div class="pink color"></div>
                     <div class="purple color"></div>
-                    <div class="green color"></div>
+                    <div class="green color"></div> -->
+                    <div class="blue color">
+                        <input type="radio" id="product_3_color_0" name="product-3" value="blue">
+                        <label for="product_3_color_0"></label>
+                    </div>
+                    <div class="pink color">
+                        <input type="radio" id="product_3_color_1" name="product-3" value="pink">
+                        <label for="product_3_color_1"></label>
+                    </div>
+                    <div class="purple color">
+                        <input type="radio" id="product_3_color_2" name="product-3" value="purple">
+                        <label for="product_3_color_2"></label>
+                    </div>
+                    <div class="green color">
+                        <input type="radio" id="product_3_color_3" name="product-3" value="green">
+                        <label for="product_3_color_3"></label>
+                    </div>
                   </div>
                 </div>
               </div>
-
-          
             </div>
-            <div class="next" id="nextBtn" onclick="scrollHorizontally(true)">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-chevron-right"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                  />
-                </svg>
-              </div>
+            <div
+              class="scroll-btn products-next"
+              id="nextBtn"
+              onclick="scrollHorizontally(true)"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chevron-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>

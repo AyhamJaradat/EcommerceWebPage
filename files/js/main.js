@@ -15,9 +15,9 @@ function initializePageEvents() {
 
 function scrollHorizontally( isRight){
     if(isRight){
-        document.getElementById("horizontal-scrollable").scrollLeft += 20;
+        document.getElementById("horizontal-scrollable").scrollLeft += 50;
     }else{
-        document.getElementById("horizontal-scrollable").scrollLeft -= 20;
+        document.getElementById("horizontal-scrollable").scrollLeft -= 50;
     }
     
 }
